@@ -1,0 +1,15 @@
+// src/components/Navbar.scss
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #f4f4f4;
+    input {
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+    .profile {
+      cursor: pointer;
+    }
+  }
+  
