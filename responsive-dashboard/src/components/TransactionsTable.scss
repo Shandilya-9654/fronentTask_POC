@@ -27,4 +27,33 @@
       }
     }
   }
+  .transactions-table-dark {
+    background: #090404;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(250, 248, 248, 0.916);
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+  
+        &:hover {
+          cursor: pointer;
+        }
+      }
+  
+      th {
+        background: #3c3b3b;
+      }
+  
+      tbody tr:hover {
+        background: #343333;
+      }
+    }
+  }
   

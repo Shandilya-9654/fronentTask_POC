@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './TransactionsTable.scss';
+import { ThemeContext } from './ThemeProvider';
+import { useContext } from 'react';
 
 const TransactionsTable = () => {
   const [data, setData] = useState([]);
@@ -29,9 +31,16 @@ const TransactionsTable = () => {
     setData(sortedData);
     setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
   };
-
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  const getClassName = () => {
+    if (theme === "dark") {
+      return "transactions-table-dark";
+    } else {
+      return "transactions-table";
+    }
+  };
   return (
-    <div className="transactions-table">
+    <div className={getClassName()}>
       <h2>Transactions</h2>
       <table>
         <thead>
