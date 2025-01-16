@@ -6,7 +6,7 @@ import './Navbar.scss';
 
 const Navbar = () => (
   <div className="navbar">
-    <input type="text" placeholder="Search..." />
+    <input className='searchBar' type="text" placeholder="Search..." />
     <div className="profile">Profile</div>
     <ThemeToggleButton />
   </div>

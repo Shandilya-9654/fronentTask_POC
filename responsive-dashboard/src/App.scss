@@ -1,48 +1,132 @@
-// .app {
-//   display: flex;
+// // .app {
+// //   display: flex;
 
-//   .main-content {
-//     flex: 1;
-//     display: flex;
-//     flex-direction: column;
-//   }
+// //   .main-content {
+// //     flex: 1;
+// //     display: flex;
+// //     flex-direction: column;
+// //   }
+// // }
+// /* Global theme styles */
+// :root {
+//   --background-color: #ffffff;
+//   --text-color: #000000;
 // }
-/* Global theme styles */
-:root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-}
 
-.dark {
-  --background-color: #000000;
-  --text-color: #ffffff;
-}
+// .dark {
+//   --background-color: #000000;
+//   --text-color: #ffffff;
+// }
 
+// .app {
+//   background-color: var(--background-color);
+//   color: var(--text-color);
+//   min-height: 100vh; /* Ensure the app covers full viewport height */
+//   display: flex; /* Restore Sidebar and Main-content alignment */
+// }
+
+// .main-content {
+//   flex: 1;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .sidebar {
+//   background-color: var(--background-color);
+//   color: var(--text-color);
+//   width: 250px;
+// }
+
+// /* Navbar-specific styles */
+// .navbar {
+//   background-color: var(--background-color);
+//   color: var(--text-color);
+//   padding: 10px 20px;
+//   border-bottom: 1px solid var(--text-color);
+// }
+
+// /* Optional: Adjust other component styles to use variables */
 .app {
   background-color: var(--background-color);
   color: var(--text-color);
-  min-height: 100vh; /* Ensure the app covers full viewport height */
-  display: flex; /* Restore Sidebar and Main-content alignment */
-}
-
-.main-content {
-  flex: 1;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Sidebar stacks on top */
+  }
 }
 
 .sidebar {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  width: 250px;
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%); /* Hidden by default */
+
+  &.open {
+    transform: translateX(0); /* Slide in when open */
+  }
 }
 
-/* Navbar-specific styles */
-.navbar {
-  background-color: var(--background-color);
-  color: var(--text-color);
-  padding: 10px 20px;
-  border-bottom: 1px solid var(--text-color);
+.sidebar-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 }
 
-/* Optional: Adjust other component styles to use variables */
+.theme-toggle {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  width: 200px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  &:hover {
+    background: #020e1a;
+  }
+}
+
+.light-mode {
+  --background-color: #fff;
+  --text-color: #000;
+}
+
+.dark-mode {
+  --background-color: #333;
+  --text-color: #fff;
+}

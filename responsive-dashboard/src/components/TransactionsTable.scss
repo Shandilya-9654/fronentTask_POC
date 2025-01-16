@@ -1,59 +1,105 @@
-.transactions-table {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+// .transactions-table {
+//     background: #fff;
+//     padding: 20px;
+//     border-radius: 8px;
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   
-    table {
-      width: 100%;
-      border-collapse: collapse;
+//     table {
+//       width: 100%;
+//       border-collapse: collapse;
   
-      th, td {
-        padding: 10px;
-        text-align: left;
-        border-bottom: 1px solid #ccc;
+//       th, td {
+//         padding: 10px;
+//         text-align: left;
+//         border-bottom: 1px solid #ccc;
   
-        &:hover {
-          cursor: pointer;
-        }
-      }
+//         &:hover {
+//           cursor: pointer;
+//         }
+//       }
   
-      th {
-        background: #f4f4f4;
-      }
+//       th {
+//         background: #f4f4f4;
+//       }
   
-      tbody tr:hover {
-        background: #f9f9f9;
+//       tbody tr:hover {
+//         background: #f9f9f9;
+//       }
+//     }
+//   }
+//   .transactions-table-dark {
+//     background: #090404;
+//     padding: 20px;
+//     border-radius: 8px;
+//     box-shadow: 0 2px 5px rgba(250, 248, 248, 0.916);
+  
+//     table {
+//       width: 100%;
+//       border-collapse: collapse;
+  
+//       th, td {
+//         padding: 10px;
+//         text-align: left;
+//         border-bottom: 1px solid #ccc;
+  
+//         &:hover {
+//           cursor: pointer;
+//         }
+//       }
+  
+//       th {
+//         background: #3c3b3b;
+//       }
+  
+//       tbody tr:hover {
+//         background: #343333;
+//       }
+//     }
+//   }
+body.dark-mode .table-row:hover {
+  background-color: #444; /* A slightly lighter shade than black */
+  color: #fff; /* White text */
+  .th{
+    background-color: #444;
+  }
+}
+
+.transactions-table,
+.transactions-table-dark {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  table {
+    width: 100%;
+    border: 1px black;
+
+    th,
+    td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+
+      &:hover {
+        cursor: pointer;
       }
     }
-  }
-  .transactions-table-dark {
-    background: #090404;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(250, 248, 248, 0.916);
-  
+
+    // th {
+    //   background: #987575;
+    // }
+
+    // tbody tr:hover {
+    //   background: #f9f9f9;
+    // }
+  // }
+ 
+
+  @media (max-width: 768px) {
+    overflow-x: auto;
     table {
-      width: 100%;
-      border-collapse: collapse;
-  
-      th, td {
-        padding: 10px;
-        text-align: left;
-        border-bottom: 1px solid #ccc;
-  
-        &:hover {
-          cursor: pointer;
-        }
-      }
-  
-      th {
-        background: #3c3b3b;
-      }
-  
-      tbody tr:hover {
-        background: #343333;
-      }
+      width: auto; /* Ensure table doesn't overflow */
     }
   }
-  
+}

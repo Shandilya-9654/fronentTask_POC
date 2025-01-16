@@ -1,15 +1,44 @@
-// src/components/Navbar.scss
+// // src/components/Navbar.scss
+// .navbar {
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 10px;
+//     background: #f4f4f4;
+//     input {
+//       padding: 5px;
+//       border: 1px solid #ccc;
+//     }
+//     .profile {
+//       cursor: pointer;
+//     }
+//   }
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    background: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f4f4f4;
+
+  input {
+    padding: 5px;
+    border: 1px solid #ccc;
+  }
+  .searchBar{
+    margin-top: 20px;
+  }
+
+  .profile {
+    cursor: pointer;
+
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
     input {
-      padding: 5px;
-      border: 1px solid #ccc;
-    }
-    .profile {
-      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
     }
   }
-  
+}

@@ -1,17 +1,11 @@
-.line-chart {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px;
-  }
+// .line-chart,
+.line-chart-dark {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+  margin-bottom: 20px;
 
-  .line-chart-dark {
-    background: #0c0c0c;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(241, 239, 239, 0.968);
-    margin-bottom: 20px;
-    color: #fff;
+  @media (max-width: 768px) {
+    padding: 10px;
   }
-  
+}
